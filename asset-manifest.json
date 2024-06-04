@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Audmes/OC_P11_Kasa/static/css/main.75e5974a.css",
+    "main.js": "/Audmes/OC_P11_Kasa/static/js/main.e46519fa.js",
+    "static/media/aboutBanner.png": "/Audmes/OC_P11_Kasa/static/media/aboutBanner.d9590614febb1cea1483.png",
+    "static/media/Banner.png": "/Audmes/OC_P11_Kasa/static/media/Banner.4c36aadaecae8cfa7756.png",
+    "static/media/logo.svg": "/Audmes/OC_P11_Kasa/static/media/logo.a6101328193bb3191cbcb50c120ec0d1.svg",
+    "index.html": "/Audmes/OC_P11_Kasa/index.html",
+    "main.75e5974a.css.map": "/Audmes/OC_P11_Kasa/static/css/main.75e5974a.css.map",
+    "main.e46519fa.js.map": "/Audmes/OC_P11_Kasa/static/js/main.e46519fa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.75e5974a.css",
+    "static/js/main.e46519fa.js"
+  ]
+}
