@@ -44,17 +44,23 @@
                 }
             }
         }
+        
         &__content {
             background-color: $secondary-color;
             width: 100%;
-    
+
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            
             border-radius: 5px;
     
             @media screen and (min-width: $breakpoint-desktop) {
                 width: 100%;
             }
     
-            p {
+            div, p {
                 @include font(20px, 400);
                 color: $text-color;
                 margin: 0 auto;
