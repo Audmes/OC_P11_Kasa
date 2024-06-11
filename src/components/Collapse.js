@@ -1,33 +1,58 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from 'react'
 
-const Collapse = ({ title, content }) => {
-    //declaration du state en utilisant le Hook useState()
-    const [isOpen, setIsOpen] = useState(false); // je definie le state du toggle (et false par défaut)
+function Collapse({ title, content }) {
+    
+	/* This is setting the initial state of the collapse. */
+	const [setActive, setActiveState] = useState('')
+	/* This is setting the initial height of the collapse to 0px. */
+	const [setHeight, setHeightState] = useState('0px')
+	/* This is setting the initial state of the rotate class. */
+	const [setRotate, setRotateState] = useState('fa-solid fa-chevron-down')
 
-    //fonction pour gérer l'afichage du contenu des collapses
-    const display = () => {
-        setIsOpen(!isOpen);
-    };
+	/* This is setting the contentCollapse to a ref. This is used to get the height of the content. */
+	const contentCollapse = useRef(null)
+    /* This is setting the initial state of the rotate class. */
+	const [setVisibility, setVisibilityState] = useState('hidden');
 
-    return (
-        // affiche le collapse replié par défaut et l'ouvre au clic puis le referme au clic en faisant disparaitre le texte et le style
-        <div className="collapse__dropdown__container">
-        <div className="collapse__dropdown__title">
-            <h2>{title}</h2>
-            <p onClick={display}>
-            {isOpen ? (
-                <i className="fa-solid fa-chevron-down"></i>
-            ) : (
-                <i className="fa-solid fa-chevron-up"></i>
-            )}
-            </p>
-        </div>
-        {/* Si le collapse est à TRUE alors il affichera la description */}
-        <div className="collapse__dropdown__content">
-            {isOpen && <div>{content}</div>}
-        </div>
-        </div>
-    );
-};
+	/**
+	 * The function toggles the collapse by changing the active state, the height state, and the rotate
+	 * state and visibility state.
+	 */
+	const toggleCollapse = () => {
+     
+		setActiveState(setActive === '' ? 'active' : '')
+		setHeightState(
+			setActive === 'active'
+				? '0px'
+				: `${contentCollapse.current.scrollHeight}px`
+		)
+		setRotateState(
+			setActive === 'active' ? 'fa-solid fa-chevron-down' : 'fa-solid fa-chevron-up'
+		)
+        setVisibilityState(
+			setActive === 'active' ? 'hidden' : ''
+		)
+	}
 
-export default Collapse;
+	return (
+		<div className="collapse__dropdown__container">
+            <div
+                className={`collapse__dropdown__title ${setActive}`}
+                onClick={toggleCollapse}
+            >
+                <h2>{title}</h2>
+                <i className={`${setRotate}`}></i>
+            </div>
+
+			<div
+				ref={contentCollapse}
+				style={{ maxHeight: `${setHeight}` }}
+				className="collapse__dropdown__content"
+			>
+                <div className={`${setVisibility}`}>{content}</div>
+			</div>
+		</div>
+	)
+}
+
+export default Collapse

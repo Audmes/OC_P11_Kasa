@@ -381,6 +381,7 @@ li {
   margin: 0 auto;
   margin-top: 1.5em;
   border-radius: 5px;
+  cursor: pointer;
 }
 @media screen and (min-width: 769px) {
   .collapse__dropdown__title {
@@ -394,6 +395,9 @@ li {
   font-weight: 500;
   line-height: 142.6%;
 }
+.collapse__dropdown__title i {
+  color: #ffffff;
+}
 .collapse__dropdown__title p {
   color: #ffffff;
 }
@@ -403,6 +407,7 @@ li {
 .collapse__dropdown__content {
   background-color: #f7f7f7;
   width: 100%;
+  transition: max-height 0.6s ease;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -422,6 +427,10 @@ li {
   color: #000000;
   margin: 0 auto;
   padding: 0.8em;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 /**
