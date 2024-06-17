@@ -1,38 +1,32 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef } from 'react';
 
-function Collapse({ title, content }) {
-    
+const Collapse = ({ title, content }) => {
 	/* This is setting the initial state of the collapse. */
-	const [setActive, setActiveState] = useState('')
+	const [setActive, setActiveState] = useState('');
 	/* This is setting the initial height of the collapse to 0px. */
-	const [setHeight, setHeightState] = useState('0px')
+	const [setHeight, setHeightState] = useState('0px');
 	/* This is setting the initial state of the rotate class. */
-	const [setRotate, setRotateState] = useState('fa-solid fa-chevron-down')
+	const [setRotate, setRotateState] = useState('fa-solid fa-chevron-down');
 
 	/* This is setting the contentCollapse to a ref. This is used to get the height of the content. */
-	const contentCollapse = useRef(null)
-    /* This is setting the initial state of the rotate class. */
-	const [setVisibility, setVisibilityState] = useState('hidden');
+	const contentCollapse = useRef(null);
 
 	/**
-	 * The function toggles the collapse by changing the active state, the height state, and the rotate
-	 * state and visibility state.
+	 * The function toggles the collapse by changing the active state, the height state and the rotate
+	 * state
 	 */
 	const toggleCollapse = () => {
      
-		setActiveState(setActive === '' ? 'active' : '')
+		setActiveState(setActive === '' ? 'active' : '');
 		setHeightState(
 			setActive === 'active'
 				? '0px'
 				: `${contentCollapse.current.scrollHeight}px`
-		)
+		);
 		setRotateState(
 			setActive === 'active' ? 'fa-solid fa-chevron-down' : 'fa-solid fa-chevron-up'
-		)
-        setVisibilityState(
-			setActive === 'active' ? 'hidden' : ''
-		)
-	}
+		);
+	};
 
 	return (
 		<div className="collapse__dropdown__container">
@@ -49,10 +43,10 @@ function Collapse({ title, content }) {
 				style={{ maxHeight: `${setHeight}` }}
 				className="collapse__dropdown__content"
 			>
-                <div className={`${setVisibility}`}>{content}</div>
+                <div>{content}</div>
 			</div>
 		</div>
-	)
-}
+	);
+};
 
-export default Collapse
+export default Collapse;

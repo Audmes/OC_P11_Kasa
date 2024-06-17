@@ -407,6 +407,7 @@ li {
 .collapse__dropdown__content {
   background-color: #f7f7f7;
   width: 100%;
+  overflow: hidden; /* Important */
   transition: max-height 0.6s ease;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -427,10 +428,6 @@ li {
   color: #000000;
   margin: 0 auto;
   padding: 0.8em;
-}
-
-.hidden {
-  visibility: hidden;
 }
 
 /**
