@@ -6,16 +6,21 @@ import Home from "./views/Home";
 import Logement from "./views/Logement";
 import NoPage from "./views/NoPage";
 
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+
 const App = () => {
   return (
       <HashRouter>
-          <Routes>
-              <Route path="/" element={<Navigate replace to="/accueil" />} />
-              <Route path="/accueil" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/logement/:id" element={<Logement />} />
-              <Route path="*" element={<NoPage />} />
-          </Routes>
+            <Header />
+            <Routes>
+                <Route path="/" element={<Navigate replace to="/accueil" />} />
+                <Route path="/accueil" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/logement/:id" element={<Logement />} />
+                <Route path="*" element={<NoPage />} />
+            </Routes>
+            <Footer />
       </HashRouter>
   );
 };

@@ -1,6 +1,4 @@
 import React from "react";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 import Banner from "../components/Banner";
 import imgBannerAbout from "../assets/images/aboutBanner.png";
 import Collapse from "../components/Collapse";
@@ -9,7 +7,6 @@ import CollapseData from "../datas/collapses.json";
 const About = () => {
   return (
     <div className="about">
-      <Header />
       <main>
         <Banner image={imgBannerAbout} titre="" />
 
@@ -25,8 +22,6 @@ const About = () => {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 };
