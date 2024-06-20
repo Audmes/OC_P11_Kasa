@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/OC_P11_Kasa/static/css/main.a7893c12.css",
+    "main.css": "/OC_P11_Kasa/static/css/main.7a5b9076.css",
     "main.js": "/OC_P11_Kasa/static/js/main.0a0c7b43.js",
     "static/media/aboutBanner.png": "/OC_P11_Kasa/static/media/aboutBanner.d9590614febb1cea1483.png",
     "static/media/Banner.png": "/OC_P11_Kasa/static/media/Banner.8befb5c906d96abedfb6.png",
     "static/media/logo.svg": "/OC_P11_Kasa/static/media/logo.a6101328193bb3191cbcb50c120ec0d1.svg",
     "index.html": "/OC_P11_Kasa/index.html",
-    "main.a7893c12.css.map": "/OC_P11_Kasa/static/css/main.a7893c12.css.map",
+    "main.7a5b9076.css.map": "/OC_P11_Kasa/static/css/main.7a5b9076.css.map",
     "main.0a0c7b43.js.map": "/OC_P11_Kasa/static/js/main.0a0c7b43.js.map"
   },
   "entrypoints": [
-    "static/css/main.a7893c12.css",
+    "static/css/main.7a5b9076.css",
     "static/js/main.0a0c7b43.js"
   ]
 }
