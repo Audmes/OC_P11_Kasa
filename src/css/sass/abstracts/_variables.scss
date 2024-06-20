@@ -10,7 +10,7 @@ $banner-background: $background-color
   url(../assets/images/Banner.png);
 
 $breakpoints: (
-    small: 350px,
+    small: 350px, /* 350px */
     medium: 768px,
     large: 992px,
     xlarge: 1200px,
@@ -18,5 +18,5 @@ $breakpoints: (
 
 $breakpoint-desktop: 769px;
 
-$wmin: 375px;
+$wmin: 320px; /* 375px */
 $wmax: 768px;
