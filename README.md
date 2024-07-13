@@ -19,7 +19,14 @@ Ce projet consiste à implémenter le front-end d’une application en utilisant
 - Initialiser une application web avec un framework
 
 ### Informations complémentaires
-- Soutenance validé le : 
+- Soutenance validé le : 20/06/2024
+
+#### Livrable
+
+##### Points forts :
+
+- Bonne prise en main de react
+- Site conforme aux attentes
 
 ### Liens
 - Maquettes : https://www.figma.com/design/2BZEoBhyxt5IwZgRn0wGsL/Kasa_FR?node-id=0-1&t=WzvXXOUCNeLFy2Or-0
